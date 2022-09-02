@@ -583,8 +583,8 @@ footer {
   font-weight: 400;
   color: #6e8698;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: justify;
+  align-items: justify;
 }
 footer .foot {
   text-align: justify;
