@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://shashiirk.github.io/fake-tweet-generator">
+  <a href="https://rawsting.github.io/fake-tweet-">
     <img alt="logo" src="assets/logo.svg" width="60" />
   </a>
 </p>
@@ -30,4 +30,4 @@ This project is licensed under [MIT](LICENSE).
 
 If you find this product useful then consider buying me a coffee 👇
 
-<p><a href="https://www.buymeacoffee.com/shashiirk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="196" /></a></p>
+<p><a href="https://www.buymeacoffee.com/" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="196" /></a></p>
