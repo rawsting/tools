@@ -516,7 +516,7 @@ main .tweet-desk .btn {
   display: block;
   border: none;
   border-radius: 6px;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: #1da1f2;
   color: white;
   font: inherit;
