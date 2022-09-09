@@ -319,6 +319,7 @@ main .tweet-desk {
 }
 main .tweet-desk h2 {
   font-size: 22px;
+  border-radius:6px;
   font-weight: 500;
 }
 main .tweet-desk .tweet_box {
@@ -350,7 +351,7 @@ main .tweet-desk .tweet_box.dark {
   }
 }
 main .tweet-desk .tweet {
-  border: 34px transparent solid;
+  border: 1px transparent solid;
   background-color: white;
   padding: 0 16px;
   font-size: 15px;
