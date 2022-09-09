@@ -211,7 +211,7 @@ main .form .form-control.upload {
 main .form .form-control.upload label {
   display: inline-block;
   position: relative;
-  border-radius: 99px;
+  border-radius: 6px;
   background-color: #1da1f2;
   color: #fff;
   font-weight: 400;
