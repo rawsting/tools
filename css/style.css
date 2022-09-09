@@ -223,12 +223,12 @@ main .form .form-control.upload label {
     transition: background 200ms ease-in;
   }
   main .form .form-control.upload label:hover {
-    background-color: #1a90d9;
+    background-color:  #0101ff;
   }
 }
 @media (hover: none) {
   main .form .form-control.upload label:active {
-    background-color: #1a90d9;
+    background-color:  #0101ff;
   }
 }
 main .form .form-control.upload .file {
