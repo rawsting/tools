@@ -339,19 +339,18 @@ main .tweet-desk .tweet_box.dark {
 @media (max-width: 940px) {
   main .tweet-desk .tweet_box {
     width: 400px;
-    border-radius:6px;
+    
   }
 }
 @media (max-width: 890px) {
   main .tweet-desk .tweet_box {
     max-width: 440px;
     width: 100%;
-    border-radius:6px;
     margin: 32px auto;
   }
 }
 main .tweet-desk .tweet {
-  border: 1px transparent solid;
+  border: 34px transparent solid;
   background-color: white;
   padding: 0 16px;
   font-size: 15px;
