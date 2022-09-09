@@ -531,12 +531,12 @@ main .tweet-desk .btn {
     transition: background 200ms ease-in;
   }
   main .tweet-desk .btn:hover {
-    background-color: #1a90d9;
+    background-color: #0101ff;
   }
 }
 @media (hover: none) {
   main .tweet-desk .btn:active {
-    background-color: #1a90d9;
+    background-color: #0101ff;
   }
 }
 @media (max-width: 890px) {
