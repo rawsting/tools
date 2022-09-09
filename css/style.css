@@ -124,7 +124,7 @@ main .form .form-control .username_input {
   align-items: center;
 }
 main .form .form-control .username_input:focus-within {
-  border-color: #1da1f2;
+  border-color: #0101ff;
   color: #0f1419;
 }
 main .form .form-control .username_input::placeholder {
@@ -184,8 +184,8 @@ main .form .form-control .group .radio_container input:focus ~ .radio_mark {
   box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.4);
 }
 main .form .form-control .group .radio_container input:checked ~ .radio_mark {
-  background-color: #1da1f2;
-  border-color: #1da1f2;
+  background-color: #0101ff;
+  border-color: #0101ff;
 }
 main .form .form-control .group .radio_mark:after {
   content: "";
@@ -212,7 +212,7 @@ main .form .form-control.upload label {
   display: inline-block;
   position: relative;
   border-radius: 6px;
-  background-color: #1da1f2;
+  background-color: #0101ff;
   color: #fff;
   font-weight: 400;
   padding: 10px 30px;
@@ -386,7 +386,7 @@ main .tweet-desk .tweet .head .title .text .top .tweet_name {
 }
 main .tweet-desk .tweet .head .title .text .top .verified {
   font-weight: 400;
-  color: #1da1f2;
+  color: #0101ff;
 }
 main .tweet-desk .tweet .head .title .text .top .verified.hide {
   display: none;
@@ -519,7 +519,7 @@ main .tweet-desk .btn {
   border: none;
   border-radius: 6px;
   border-radius: 6px;
-  background-color: #1da1f2;
+  background-color: #0101ff;
   color: white;
   font: inherit;
   margin: auto;
