@@ -256,10 +256,10 @@ main .form .form-control.upload .file-name.show {
   display: block;
 }
 main .form .form-control.upload .reset {
-  border: 1px #1da1f2 solid;
+  border: 1px #0101ff solid;
   border-radius: 6px;
   background-color: white;
-  color: #1da1f2;
+  color: #0101ff;
   font: inherit;
   cursor: pointer;
   padding: 10px 30px;
