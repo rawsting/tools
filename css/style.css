@@ -326,6 +326,7 @@ main .tweet-desk .tweet_box {
   background-color: white;
   margin: 32px 0 34px;
   width: 440px;
+  border-radius: 6px ;
 }
 main .tweet-desk .tweet_box.dim {
   border: 1px #15202b solid;
@@ -343,7 +344,6 @@ main .tweet-desk .tweet_box.dark {
 @media (max-width: 890px) {
   main .tweet-desk .tweet_box {
     max-width: 440px;
-    border-radius:6px;
     width: 100%;
     margin: 32px auto;
   }
