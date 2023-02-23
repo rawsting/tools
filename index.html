@@ -5,9 +5,20 @@
 	<title>Image Converter</title>
 </head>
 <style>
+.myDiv0{
+  border: 5px; font-size: 40px;
+  border: 2px blue;
+   border-radius: 5px;
+  background-color: #f8f8fa;    
+  text-align: center;
+   padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  }
 .myDiv {
   border: 5px; font-size: 40px;
-  border:dashed 2px blue;
+  border: dashed 2px blue;
    border-radius: 5px;
   background-color: #f8f8fa;    
   text-align: center;
@@ -67,7 +78,7 @@
 }
 </style>
 <body>
- 
+ <div class="myDiv0">
 <h1 style="font-family:verdana">Image Converter</h1>
 <div class="myDiv">	<div class="myDiv1">	
 
@@ -91,7 +102,7 @@
 	</form>
 </div> </div>
 	<script>
-		function convertImage() {
+		function convertImage()</div> {
 			// Get the selected image file, output format, and compression percentage
 			var imageFile = document.getElementById("image-input").files[0];
 			var outputFormat = document.getElementById("format-select").value;
