@@ -1,28 +1,95 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Image Converter</title>
 </head>
+<style>
+.myDiv {
+  border: 5px;
+  border:dashed 2px blue;
+   border-radius: 5px;
+  background-color: #f8f8fa;    
+  text-align: center;
+   padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  }
+  .myDiv1 {
+  border: 0px outset #474bff;
+  background-color: #f8f8fa;  
+   padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+  .specimage {
+   border: 5px ;
+   border-radius: 5px;
+  background-color: #f8f8fa;    
+  text-align: left;
+   padding-top: 5px;
+  padding-right: 3px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+}
+ .speciout {
+   border: 5px ;
+   border-radius: 5px;
+  background-color: #f8f8fa;    
+  text-align: left;
+   padding-top: 5px;
+  padding-right: 3px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+}
+
+ .specipercentage {
+   border: 5px ;
+   border-radius: 5px;
+  background-color: #f8f8fa;    
+  text-align: left;
+   padding-top: 5px;
+  padding-right: 3px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+}
+.specibutton {
+   border: 5px ;
+   border-radius: 5px;
+  background-color: #f8f8fa;    
+  text-align: left;
+   padding-top: 5px;
+  padding-right: 3px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+}
+</style>
 <body>
-	<h1>Image Converter</h1>
-	
+ 
+<h1 style="font-family:verdana">Image Converter</h1>
+<div class="myDiv">	<div class="myDiv1">	
+
 	<form id="image-form">
-		<label for="image-input">Select an image file:</label>
+    <div class="specimage">
+		<label style="font-family:verdana" for="image-input">Select any image:</label>
 		<input type="file" id="image-input" accept="image/*">
-		<br>
-		<label for="format-select">Select the output format:</label>
+		<br></div>
+	  <div class="speciout">	<label  style="font-family:verdana" for="format-select">Please select output image format:</label>
 		<select id="format-select">
 			<option value="jpg">JPG</option>
 			<option value="jpeg">JPEG</option>
 			<option value="png">PNG</option>
 		</select>
-		<br>
-		<label for="compression-input">Enter the compression percentage (0-100):</label>
+		<br>  </div>
+       
+	<div class="specipercentage">	<label  style="font-family:verdana"  for="compression-input">Enter compression percentage [0-100]:</label>
 		<input type="number" id="compression-input" min="0" max="100" value="0">
-		<br>
-		<button type="button" onclick="convertImage()">Convert</button>
+		<br></div>
+	<div class="specibutton">	<button type="button" onclick="convertImage()">Convert</button></div>
 	</form>
-
+</div> </div>
 	<script>
 		function convertImage() {
 			// Get the selected image file, output format, and compression percentage
