@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YouTube Video Thumbnail Downloader</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 30px;
+		}
+		h1 {
+			font-size: 32px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			width: 80%;
+			max-width: 600px;
+		}
+		form label {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		form input[type="text"] {
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding: 10px;
+			width: 100%;
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		form button[type="submit"] {
+			background-color: #f44336;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+		}
+		form button[type="submit"]:hover {
+			background-color: #d32f2f;
+		}
+		.thumbnails {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 30px;
+		}
+		.thumbnail {
+			margin: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			transition: box-shadow 0.2s;
+		}
+		.thumbnail:hover {
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+		}
+		.thumbnail img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+		.download-link {
+			display: block;
+			margin-top: 10px;
+			font-size: 16px;
+			text-align: center;
+			color: #333;
+			text-decoration: none;
+			transition: color 0.2s;
+		}
+		.download-link:hover {
+			color: #f44336;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>YouTube Video Thumbnail Downloader</h1>
+		<form id="form">
+			<label for="url">Enter YouTube Video URL:</label>
+			<input type="text" id="url" placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+			<button type="submit">Get Thumbnails</button>
+		</form>
+		<div id="thumbnails" class="thumbnails"></div>
+	</div>
+	<script>
+		const form = document.getElementById('form');
+		const urlInput = document.getElementById('url');
+		const thumbnailsDiv = document.getElementById('thumbnails');	form.addEventListener('submit', e => {
+		e.preventDefault();
+		const url = urlInput.value.trim();
+		if (!url) {
+			alert('Please enter a YouTube video URL');
+			return;
+		}
+		const videoId = getVideoId(url);
+		if (!videoId) {
+			alert('Invalid YouTube video URL');
+			return;
+		}
+		const thumbnailUrls = getThumbnailUrls(videoId);
+		if (thumbnailUrls.length === 0) {
+			alert('Failed to fetch YouTube video thumbnails');
+			return;
+		}
+		displayThumbnails(thumbnailUrls);
+	});
+
+	function getVideoId(url) {
+		const shortUrlRegex = /^https?:\/\/youtu\.be\/([a-zA-Z0-9_-]+)$/;
+		const longUrlRegex = /^https?:\/\/(?:www\.)?youtube\.com\/watch\?(?=.*v=([a-zA-Z0-9_-]+))/;
+		const match = url.match(shortUrlRegex) || url.match(longUrlRegex);
+		return match ? match[1] : null;
+	}
+
+	function getThumbnailUrls(videoId) {
+		return [
+			`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+			`https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+			`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+			`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`
+		];
+	}
+
+	function displayThumbnails(thumbnailUrls) {
+		thumbnailsDiv.innerHTML = '';
+		thumbnailUrls.forEach(thumbnailUrl => {
+			const thumbnail = document.createElement('div');
+			thumbnail.classList.add('thumbnail');
+			const thumbnailImg = document.createElement('img');
+			thumbnailImg.src = thumbnailUrl;
+			thumbnail.appendChild(thumbnailImg);
+			const downloadLink = document.createElement('a');
+			downloadLink.classList.add('download-link');
+			downloadLink.href = thumbnailUrl;
+			downloadLink.target = '_blank';
+			downloadLink.download = true;
+			downloadLink.textContent = 'Download';
+			thumbnail.appendChild(downloadLink);
+			thumbnailsDiv.appendChild(thumbnail);
+		});
+	}
+</script>
+</body>
+</html>
