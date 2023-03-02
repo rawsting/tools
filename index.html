@@ -1,243 +1,137 @@
 
+	
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Image Converter With Best Quality & Free Pro Features</title>
-	<meta name="viewport" content="initial-scale=0.45">
-    <meta name="description" content=">Image Converter - PNG, JPG, JPEG With Compressor">
- <meta name="keywords" content="image converter, online image converter, convert image format online, photo converter, convert images, JPG to PNG, JPG to JPEG, PNG to JPG , PNG TO JPEG, JPEG to PNG, JPEG to JPG, convert photos online, convert image to jpg, image converter to jpg, change image format online, image compress online, image compresser, compress photos, photos compresser" />
+  <head>
+    <meta charset="UTF-8">
+    <title>YouTube Thumbnail Downloader Full HD</title>
+	  <meta name="viewport" content="initial-scale=1.0">
+    <meta name="description" content="YouTube Thumbnail Grabber Full HD">
+ <meta name="keywords" content="yt thumbnail dl,Yt thumbnail grabber,yt thumbnail extractor,Social media thumbnail downloader,Thumbnail saver,Thumbnail grabber,Online thumbnail downloader,Thumbnail downloader tool,Free thumbnail grabber" />
 <meta property="og:title" content=""/>
     <meta property="og:description" content=""/>
     <meta property="og:image" content=""/>
 	</head>
-<style>
-.myDiv0{
-  border: 5px; font-size: 20px;
-  border: 2px blue;
-   border-radius: 5px;
-  background-color: #f8f8fa;    
-  text-align: center;
-   padding-top: 50px;
-  padding-right: 280px;
-  padding-bottom: 50px;
-  padding-left: 280px;
-  }
-	
-.myDiv {
-  border: 5px; font-size: 30px;
-  
-  background-color: #f8f8fa;    
-  text-align: center;
-   padding-top: 5px;
-  padding-right: 3px;
-  padding-bottom: 5px;
-  padding-left: 3px;
-  }
-  .myDiv1 {
-border: dashed 2px blue;
-   border-radius: 5px;
-  background-color: #f8f8fa;  
-   padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
-  .specimage {
-   border: 5px ;
-   border-radius: 5px;
-  background-color: #f8f8fa;    
-  text-align: left;
-   padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-}
- .speciout {
-   border: 5px ;
-   border-radius: 5px;
-  background-color: #f8f8fa;    
-  text-align: left;
-   padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        margin-right: 10px;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 4px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+      }
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .thumbnail-container {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .thumbnail {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      .download-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>YouTube Thumbnail Downloader</h1>
+      <form onsubmit="return getThumbnails()">
+        <input type="text" id="urlInput" placeholder="Enter YouTube video URL">
+        <button type="submit">Get Thumbnails</button>
+      </form>
+      <div class="thumbnail-container" id="thumbnailContainer">
+      </div>
+    </div>
+    <script>
+      function getThumbnails() {
+        var urlInput = document.getElementById("urlInput").value;
+        var videoId = "";
+        var shortUrlRegex = /https:\/\/youtu.be\/([a-zA-Z0-9_-]+)/;
+        var longUrlRegex = /https:\/\/www.youtube.com\/watch\?v=([a-zA-Z0-9_-]+)/;
+
+        if (shortUrlRegex.test(urlInput)) {
+          var shortUrlMatch = urlInput.match(shortUrlRegex);
+          videoId = shortUrlMatch[1];
+        } else if (longUrlRegex.test(urlInput)) {
+          var longUrlMatch = urlInput.match(longUrlRegex);
+          videoId = longUrlMatch[1];
+        } else {
+          alert("Invalid YouTube URL");
+          return false;
+        }
+        
+        var thumbnailContainer = document.getElementById("thumbnailContainer");
+        thumbnailContainer.innerHTML = "";
+        
+        var thumbnailQualities = ["maxresdefault", "sddefault", "hqdefault", "mqdefault", "default"];
+        for (var i = 0; i < thumbnailQualities.length; i++) {
+          var thumbnailUrl = "https://img.youtube.com/vi/" + videoId +
+
+"/" + thumbnailQualities[i] + ".jpg";
+var thumbnailElem = document.createElement("div");
+thumbnailElem.classList.add("thumbnail");
+var imgElem = document.createElement("img");
+imgElem.src = thumbnailUrl;
+thumbnailElem.appendChild(imgElem);
+var downloadBtn = document.createElement("a");
+downloadBtn.href = thumbnailUrl;
+downloadBtn.download = "thumbnail_" + thumbnailQualities[i] + ".jpg";
+downloadBtn.textContent = "Download";
+downloadBtn.classList.add("download-btn");
+thumbnailElem.appendChild(downloadBtn);
+thumbnailContainer.appendChild(thumbnailElem);
 }
 
- .specipercentage {
-   border: 5px ;
-   border-radius: 5px;
-  background-color: #f8f8fa;    
-  text-align: left;
-   padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-}
-.specibutton {
-   border: 5px ;
-   border-radius: 5px;
-  background-color: #f8f8fa;    
-  text-align: right;
-   padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-}
-</style>
-<body>
- <div class="myDiv0">
-<h1 style="font-family:verdana">Image Converter</h1>
-<div class="myDiv">	<div class="myDiv1">	
-
-	<form id="image-form">
-    <div class="specimage">
-		<label style="font-family:verdana" for="image-input">Select any image:</label>
-		<input type="file" id="image-input" accept="image/*">
-		<br></div>
-	  <div class="speciout">	<label  style="font-family:verdana" for="format-select">Select output image format:</label>
-		<select id="format-select">
-			<option value="jpg">JPG</option>
-			<option value="jpeg">JPEG</option>
-			<option value="png">PNG</option>
-		</select>
-		<br>  </div>
-       
-	<div class="specipercentage">	<label  style="font-family:verdana"  for="compression-input">Compress percentage(0-100):</label>
-		<input type="number" id="compression-input" min="0" max="100" value="0">
-		<br></div>
-	<div class="specibutton">	<button type="button" onclick="convertImage()">Convert</button></div>
-	</form>
-</div> </div></div>
-	<script>
-		function convertImage()  {
-			// Get the selected image file, output format, and compression percentage
-			var imageFile = document.getElementById("image-input").files[0];
-			var outputFormat = document.getElementById("format-select").value;
-			var compressionPercentage = document.getElementById("compression-input").value;
-			
-			// Create a new FileReader object
-			var reader = new FileReader();
-			
-			// Set the onload function to convert the image once it's loaded
-			reader.onload = function(event) {
-				var img = new Image();
-				img.onload = function() {
-					// Create a new canvas element to draw the image onto
-					var canvas = document.createElement("canvas");
-					
-					// Calculate the new dimensions based on the compression percentage
-					var width = img.width * (compressionPercentage / 100);
-					var height = img.height * (compressionPercentage / 100);
-					
-					// Set the canvas dimensions and draw the compressed image onto it
-					canvas.width = width;
-					canvas.height = height;
-					var ctx = canvas.getContext("2d");
-					ctx.drawImage(img, 0, 0, width, height);
-					
-					// Convert the canvas to a data URL with the specified output format
-					var dataURL = canvas.toDataURL("image/" + outputFormat);
-					
-					// Create a link element to download the converted image
-					var link = document.createElement("a");
-					link.download = "image." + outputFormat;
-					link.href = dataURL;
-					link.click();
-				};
-				img.src = event.target.result;
-			};
-			
-			// Read the selected image file as a data URL
-			reader.readAsDataURL(imageFile);
-		}
-	</script>
-</body>
+    return false;
+  }
+</script>
+  </body>
 </html>
-<div>
-<table style="border-collapse: collapse; width: 99.986%; height: 22.4px;">
-<tbody>
-<tr style="height: 22.4px;">
-<td style="width: 98.8966%; height: 22.4px;">
-<table style="border-collapse: collapse; width: 100.115%;" border="0">
-<tbody>
-<tr>
-<td style="width: 98.8679%;">
-<table style="border-collapse: collapse; width: 100.143%; background-color: #f9f8fb;" border="0">
-<tbody>
-<tr>
-<td style="width: 20.1706%;">
-<table style="border-collapse: collapse; width: 100.382%; background-color: #f9f8fb;" border="0">
-<tbody>
-<tr>
-<td style="width: 96.3018%;">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td style="width: 60.4389%;">
-<table style="border-collapse: collapse; width: 100.361%;" border="0">
-<tbody>
-<tr>
-<td style="width: 96.589%;">
-<div>
-<table style="border-collapse: collapse; width: 99.986%; background-color: #f9f8fb; border-color: #f9f8fb;" border="0">
-<tbody>
-<tr>
-<td style="width: 100%;">
-<div style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Image converter supports JPG images to PNG , PNG images to JPG, JPG images to JPEG, PNG images to JPEG, JPEG images to PNG, JPEG images to JPG format without losing most quality of the images with advanced compression software.</span><br /><br /><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">No signup required for using this tool, offers unlimited conversion and file size upto 100 MB.</span></div>
-<div style="text-align: justify;">&nbsp;</div>
-<div style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Click on Choose Files button and select images you wish to convert or Drag and drop images you wish for uploading</span></div>
-<div style="text-align: justify;">&nbsp;</div>
-<div style="text-align: justify; line-height: 1;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">After uploading images relax and let our tool convert image format without loosing most of quality with our quality software.</span></div>
-<h1 style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">JPG Image to PNG Conversion</span></h1>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Files with .JPG extension and&nbsp; .PNG are images. The JPG and PNG files contain the Information of visualising the images, drawings, photocopies, pics and arts.</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">The JPG images are different from PNG images. The JPG file you have is low quality. This means the quality of image is lost.</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">You can choose the file size of the image while creating the JPG. Better quality of the image has big file size and lesser quality of the image has less small file size.</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Otherhand, PNGs are qualitative and lossless, they are stored as it is. PNGs can also have tranparent background, whereas JPGs do not support &nbsp;transparency.</span></p>
-<h2 style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">How to convert JPG images to PNG ?</span></h2>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">For converting JPG to PNG, Start and upload a JPG image into the tool provided above by clicking on "CHOOSE FILES" button and select the image and click open or you can drag and drop your file. Please note that tool supports only one image at a time for the time being.</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Our tool can also compress images. After uploading your JPG file, simply select the "Compress Image" option and type the compression percentage to reduce its size without losing most of its quality. This feature is useful for those who want to optimize their website or email load times, conserve storage space on their devices.&nbsp;</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">You can easily upload and compress JPG images, making it the perfect solution for professionals and students who are applying for examinations, office works etc.</span></p>
-<h2 style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Is converting JPGs to PNGs safe ?</span></h2>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">We assure that using our website to convert your files is completely a safe process and your original file will be intact on your device.&nbsp;</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">Additionally, we delete all uploaded and converted files after user leaves the session.</span></p>
-<p style="text-align: justify;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">We ensure the security of users sensitive information. you can convert your JPG images to png images and its completely free and safe.</span></p>
-</td>
-</tr>
-<tr>
-<td style="width: 100%;">
-<div style="text-align: center;"><span style="font-family: verdana, geneva, sans-serif; font-size: 18pt;">&copy;️ spunktools.com&nbsp; | Made with ❤️ on Earth | <a href="spunktools.com/termsandprivacy.html">Terms &amp; privacy</a></span></div>
-</td>
-</tr>
-<tr>
-<td style="width: 100%;">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td style="width: 19.3667%;">
-<table style="border-collapse: collapse; width: 100.366%; background-color: #f9f8fb;" border="0">
-<tbody>
-<tr>
-<td style="width: 96.457%;">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
