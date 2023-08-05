@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Library</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <styles>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #2196F3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.emoji-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+.emoji-container .emoji {
+  cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.emoji-container .emoji:hover {
+  background-color: #f1f1f1;
+}
+
+.ads-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin-top: 20px;
+}
+
+.ads-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.category-wise {
+  margin-top: 20px;
+}
+
+.category-container {
+  margin-top: 10px;
+}
+
+.category-wise h2 {
+  margin-bottom: 20px;
+}
+
+.category-container .category-section {
+  margin-bottom: 20px;
+}
+
+.category-container .category-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}</styles>
+</head>
+
+<body>
+  <header>
+    <h1>Emoji Library</h1>
+  </header>
+  <main>
+    <section class="frequently-used">
+      <h2>Frequently Used</h2>
+      <div class="emoji-container" id="frequently-used-container">
+        <!-- Frequently used emojis will be generated here -->
+      </div>
+    </section>
+
+    <section class="category-wise">
+      <h2>Category-wise</h2>
+      <div class="category-container">
+        <!-- Each category will be generated here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Google Ads container -->
+  <div class="ads-container" id="google-ads-container">
+    <!-- Insert your Google Ads code here -->
+  </div>
+
+  <script>const frequentlyUsedEmojis = [
+  // Add your frequently used emojis here
+  "😄", "😊", "😃", "😉", "😍", "😘", "🥰", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥳", "🤩", "🥸", "🤗", "🤭", "🤫", "🤔", "🤐", "🤢", "🤮", "🤧", "🥵", "🥶", "🥴", "😵", "🤯", "🤠", "🥳", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤥", "🤫", "🤔", "🤐", "😷", "🤒", "🤕", "🤢", "🤮", "🤧", "😇", "🥰", "😍", "😘", "😗", "😙", "😚", "🥸", "🤨", "🧐", "🤓", "😎", "🤩", "🥳", "🤗", "🤭", "🤫", "🤥", "🤐", "🤨", "😑", "😶", "😐", "😏", "😒", "🙄", "😬", "🤨", "🤥", "🤫", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😒", "😔"
+];
+
+const emojisByCategory= {
+  "Smiley Face Emojis": ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😊", "😇", "🙂", "🙃"],
+  "Emotional Faces Emojis": ["😉", "😌", "😍", "😘", "🥰", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🤩", "🥳"],
+  "Faces with Tongue Emojis": ["😋", "😛", "😝", "😜", "🤪"],
+  "Neutral Faces Emojis": ["😐", "😑", "😶", "🙄", "😏", "😒", "🤨"],
+  "Sleepy Faces Emojis": ["😴", "🥱", "😪", "😫"],
+  "Sick Faces Emojis": ["😷", "🤒", "🤕", "🤢", "🤮", "🤧"],
+  "Concerned Faces Emojis": ["😕", "😟", "🙁", "☹️", "😮", "😯", "😦", "😧", "😨", "😰", "😥", "😢", "😭", "😱", "😖", "😣", "😞", "😓", "😩"],
+  "Negative Faces Emojis": ["😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😒", "😔"],
+  "Costume Faces Emojis": ["🤠", "🥳", "🥸"],
+  "Faces that require more than one unicode character": ["🥺", "🤗", "🤭", "🤫", "🤔", "🤐"],
+  "Cat Faces Emojis": ["😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾"],
+  "Monkey Faces Emojis": ["🙈", "🙉", "🙊"],
+  "Emotion Emojis": ["💘", "💝", "💖", "💗", "💓", "💞", "💕", "💟", "❣️", "💔", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎"],
+  "Hands and other Body Parts Emojis": ["👋", "👏", "🙌", "👐", "🤲", "🤝", "🙏", "✍️", "💅"],
+  "Person Emojis": ["🙎", "🙎‍♂️", "🙎‍♀️", "🙍", "🙍‍♂️", "🙍‍♀️", "💁", "💁‍♂️", "💁‍♀️", "🙅", "🙅‍♂️", "🙅‍♀️", "🙆", "🙆‍♂️", "🙆‍♀️", "🙋", "🙋‍♂️", "🙋‍♀️", "🤷", "🤷‍♂️", "🤷‍♀️", "🙇", "🙇‍♂️", "🙇‍♀️", "💆", "💆‍♂️", "💆‍♀️", "💇", "💇‍♂️", "💇‍♀️", "🚶", "🚶‍♂️", "🚶‍♀️", "🏃", "🏃‍♂️", "🏃‍♀️", "💃", "🕺", "👯", "👯‍♂️", "👯‍♀️", "🧖", "🧖‍♂️", "🧖‍♀️", "🕴️", "🧗", "🧗‍♂️", "🧗‍♀️", "🧘", "🧘‍♂️", "🧘‍♀️", "🛀"],
+};
+
+
+// Function to generate the frequently used emojis
+function generateFrequentlyUsedEmojis() {
+  const frequentlyUsedContainer = document.getElementById("frequently-used-container");
+  frequentlyUsedEmojis.forEach((emoji) => {
+    const emojiElement = document.createElement("span");
+    emojiElement.className = "emoji";
+    emojiElement.innerText = emoji;
+    emojiElement.addEventListener("click", () => copyToClipboard(emoji));
+    frequentlyUsedContainer.appendChild(emojiElement);
+  });
+}
+
+// Function to generate category-wise emojis
+function generateCategoryWiseEmojis(category, emojis) {
+  const categoryContainer = document.querySelector(".category-container");
+  const categorySection = document.createElement("div");
+  categorySection.className = "category-section";
+
+  const categoryHeading = document.createElement("h3");
+  categoryHeading.className = "category-heading";
+  categoryHeading.innerText = category;
+  categorySection.appendChild(categoryHeading);
+
+  const emojiContainer = document.createElement("div");
+  emojiContainer.className = "emoji-container";
+  emojis.forEach((emoji) => {
+    const emojiElement = document.createElement("span");
+    emojiElement.className = "emoji";
+    emojiElement.innerText = emoji;
+    emojiElement.addEventListener("click", () => copyToClipboard(emoji));
+    emojiContainer.appendChild(emojiElement);
+  });
+
+  categorySection.appendChild(emojiContainer);
+  categoryContainer.appendChild(categorySection);
+}
+
+// Function to copy emoji to clipboard
+function copyToClipboard(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+}
+
+// Initialize the page
+generateFrequentlyUsedEmojis();
+for (const category in emojisByCategory) {
+  generateCategoryWiseEmojis(category, emojisByCategory[category]);
+}</script>
+</body>
+
+</html>
