@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <style>.link {
+  position: relative;
+  text-decoration: underline;
+}
+.column-for-content-elements,
+.navigation {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation {
+  flex-direction: row;
+  gap: var(--gap-5xs);
+}
+.column-for-content-elements {
+  flex: 1;
+  flex-direction: column;
+}
+.navigation-bar-row-for-conten {
+  align-self: stretch;
+  background-color: var(--color-whitesmoke);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base);
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+.divider {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-lightgray);
+  height: 1px;
+}
+.section-divider-row-for-conte {
+  align-self: stretch;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base) var(--padding-13xl);
+  align-items: center;
+  justify-content: flex-start;
+}
+.gland-pharma-1 {
+  position: relative;
+  width: 600px;
+  height: 338px;
+  object-fit: cover;
+}
+.this-pharma-stock {
+  margin: 0;
+}
+.text {
+  align-self: stretch;
+  position: relative;
+  line-height: 114%;
+}
+.column-for-content-elements3 {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.heading-row-for-content-colum {
+  align-self: stretch;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl);
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 28px;
+}
+.vector-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.data-table-cell-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.text1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 150%;
+}
+.data-table-row {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xs);
+}
+.data-table-cell-content3 {
+  flex: 1;
+  align-items: flex-end;
+}
+.column-for-content-elements5,
+.data-table,
+.data-table-cell-content3 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.data-table {
+  align-self: stretch;
+  align-items: center;
+  gap: var(--gap-5xs);
+}
+.column-for-content-elements5 {
+  flex: 1;
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  align-items: flex-start;
+}
+.checkbox-lists-split-row-fo {
+  align-self: stretch;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+}
+.background,
+.gland-pharma {
+  color: var(--color-mediumslateblue);
+}
+.background {
+  margin: 0;
+}
+.paragraph-row-for-content-col {
+  align-self: stretch;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl);
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-100);
+}
+.gland-pharma-profit-and-loss-1 {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}
+.button,
+.column-for-content-elements11 {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  flex-direction: row;
+  padding: var(--padding-9xs);
+}
+.column-for-content-elements11 {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+.footer-links-stacked-row-for,
+.rtt {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer-links-stacked-row-for {
+  align-self: stretch;
+  background-color: var(--color-whitesmoke);
+  flex-direction: row;
+  padding: var(--padding-base);
+  align-items: center;
+  text-align: center;
+  color: var(--color-dimgray-200);
+}
+.rtt {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: var(--font-size-smi);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-smi: 13px;
+  --font-size-base: 16px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-lightgray: #ccc;
+  --color-whitesmoke: #eee;
+  --color-dimgray-100: #676766;
+  --color-dimgray-200: #4d4d4d;
+  --color-mediumslateblue: #3b49df;
+  --color-gray-100: #777;
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-5xs: 8px;
+
+  /* Paddings */
+  --padding-base: 16px;
+  --padding-13xl: 32px;
+  --padding-9xs: 4px;
+}
+body {
+     margin: auto;
+     width: 640px;
+     padding: 50px;
+     font-family: 'Avenir', sans-serif;
+     color: #33475b;
+}
+/* Centered Image Code */
+ img {
+     display: block;
+     width: 60%;
+     margin: auto;
+}
+</style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="rtt">
+      
+         <header class="text-gray-600 body-font">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .center-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center center-header">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <span class="ml-3 text-xl">spunktools.com</span>
+    </a>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+      <a href="https://spunktools.com" class="mr-5 hover:text-gray-900">Home</a>
+      <a href="https://spunktools.com/privacypolicy.html" class="mr-5 hover:text-gray-900">Privacy Policy</a>
+      <a href="https://spunktools.com/termsandconditions.html" class="mr-5 hover:text-gray-900">Terms&Conditions</a>
+      <a href="https://spunktools.com/aboutus.html" class="mr-5 hover:text-gray-900">AboutUs</a>
+    </nav>
+  </div>
+</header>
+
+        
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div><div class="" style="margin:0px auto;max-width:600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;"><tbody><tr><td style="direction:ltr;font-size:0;padding:0;text-align:center;">
+<!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:600px;">
+<![endif]--><div class="pc100 ogf" style="font-size:0;text-align:left;direction:ltr;display:inline-block;width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><tbody><tr><td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"><tbody><tr><td align="left" class="i fw-1" style="font-size:0;padding:0;word-break:break-word;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0;" class="fwm"><tbody><tr><td style="width:600px;" class="fwm"> <img alt="" src="https://raw.githubusercontent.com/rawsting/tools/main/assets/Gland%20pharma.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="600" height="auto">
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+<!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+</td></tr></tbody></table></div>
+
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="heading-row-for-content-colum">
+        <div class="column-for-content-elements3">
+          <b class="text">
+            <p class="this-pharma-stock">
+              This Pharma Stock Gained 2700% Since IPO But Is Now Down 60% -
+            </p>
+            <p class="this-pharma-stock">What Happened?</p>
+          </b>
+        </div>
+      </div>
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="checkbox-lists-split-row-fo">
+        <div class="column-for-content-elements5">
+          <div class="data-table">
+            <div class="data-table-row">
+              <div class="data-table-cell-content">
+                <img
+                  class="vector-icon"
+                  alt=""
+                  src="https://raw.githubusercontent.com/rawsting/tools/main/assets/tick.png"
+                />
+              </div>
+              <div class="column-for-content-elements3">
+                <div class="text1">Financial Performance</div>
+              </div>
+            </div>
+            <div class="data-table-row">
+              <div class="data-table-cell-content">
+                <img
+                  class="vector-icon"
+                  alt=""
+                  src="https://raw.githubusercontent.com/rawsting/tools/main/assets/tick.png"
+                />
+              </div>
+              <div class="data-table-cell-content3">
+                <div class="text1">Cash Flows</div>
+              </div>
+            </div>
+            <div class="data-table-row">
+              <div class="data-table-cell-content">
+                <img
+                  class="vector-icon"
+                  alt=""
+                  src="https://raw.githubusercontent.com/rawsting/tools/main/assets/tick.png"
+                />
+              </div>
+              <div class="data-table-cell-content3">
+                <div class="text1">Capital Allocation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-for-content-elements3">
+          <div class="data-table">
+            <div class="data-table-row">
+              <div class="data-table-cell-content">
+                <img
+                  class="vector-icon"
+                  alt=""
+                  src="https://raw.githubusercontent.com/rawsting/tools/main/assets/tick.png"
+                />
+              </div>
+              <div class="column-for-content-elements3">
+                <div class="text1">Valuation</div>
+              </div>
+            </div>
+            <div class="data-table-row">
+              <div class="data-table-cell-content">
+                <img
+                  class="vector-icon"
+                  alt=""
+                  src="https://raw.githubusercontent.com/rawsting/tools/main/assets/tick.png"
+                />
+              </div>
+              <div class="data-table-cell-content3">
+                <div class="text1">Key Positives</div>
+              </div>
+            </div>
+            <div class="data-table-row">
+              <div class="data-table-cell-content">
+                <img
+                  class="vector-icon"
+                  alt=""
+                  src="https://raw.githubusercontent.com/rawsting/tools/main/assets/tick.png"
+                />
+              </div>
+              <div class="data-table-cell-content3">
+                <div class="text1">Risks</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="paragraph-row-for-content-col">
+        <div class="column-for-content-elements3">
+          <div class="text1">
+            <p class="this-pharma-stock">
+              <span class="gland-pharma">Gland Pharma:</span>
+              <span>
+                The Leading Indian Injectables Company Facing Near-Term
+                Headwinds
+              </span>
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Gland Pharma is one of the fastest growing generic injectables
+              companies in India with a strong track record of financial
+              performance, quality compliance and growth. However, after a
+              stellar IPO and market debut, the company has faced some
+              roadblocks over the past year weighing on its stock performance.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              In this article, we will analyze Gland Pharma's historical growth
+              trajectory, operating metrics, financial health, cash flows and
+              valuation to assess whether the current corrections present a
+              buying opportunity for long term investors.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="background">Background</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Founded in 1978, Gland Pharma is one of the earliest homegrown
+              injectables companies in India. It has steadily built up its
+              portfolio of injectables and contracting manufacturing services
+              focused primarily on regulated markets.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              The company operates 7 manufacturing facilities with capacity of
+              750 million units. It has a wide portfolio of 360+ products across
+              major therapies and 50+ customs synthesis products.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Gland Pharma gets over 50% of its revenues from the US, 40% from
+              Europe and rest from India and RoW markets. It is a global leader
+              in injectables with a market share of ~2%.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              The company filed for IPO in 2018 but later withdrew it on account
+              of regulatory probes on the former promoter. It refiled DRHP in
+              2020 and went public in Nov 2020 at a price of ₹1500 per share.
+              The stock has since touched a high of ₹4299 before correcting
+              steeply over the past year.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              <span class="gland-pharma">Financial Performance</span>
+              <span> </span>
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Gland Pharma has demonstrated consistent revenue growth of ~15-17%
+              CAGR over the past 5-7 years driven by new product launches.
+              However, growth tapered down to just 0.75% in FY22 due to slowing
+              demand and supply chain constraints.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Despite this near term blip, the long term growth story remains
+              intact backed by Gland Pharma's strong pipeline, new capacity
+              addition and growth in biologics segment. As export markets
+              normalize post-Covid, growth should recover back to low-teens
+              levels.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              On the profitability front, EBITDA margins have remained strong at
+              34-37% levels reflecting the high contribution of exports and
+              injectables vertical. Margins declined in FY22 due to cost
+              inflation but are expected to remain above 30% going forward.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              While return on equity moderated from 27% in FY14 to 17% in FY22
+              due to rising share count, return on capital employed has still
+              averaged a healthy 25% over the past 3 years highlighting capital
+              efficiency.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              The company has utilized its profits wisely by consistently paying
+              down debt and building strong reserves. As of FY22, Gland Pharma
+              had zero debt and reserves of ₹7142 crore providing a robust
+              balance sheet.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Overall, barring the temporary Covid-led disruption, Gland Pharma
+              has showcased all the hallmarks of a fundamentally strong business
+              - industry leading growth, high profitability, efficient capital
+              utilization and a strong balance sheet. As growth resumes, so
+              should its earnings momentum.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="background">Cash Flows and Capital Allocation</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Gland Pharma has generated largely positive and growing operating
+              cash flows reflecting steady conversion of profits into cash. With
+              expansion plans now behind, Capex intensity is expected to decline
+              freeing up higher cash flows.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              On the whole, Gland Pharma has demonstrated a balanced approach to
+              capital allocation. It has consistently repaid its debt and built
+              reserves while also investing heavily into expanding capacity over
+              the past 5 years.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Capex spend was ₹1000+ crore in the past two years as the company
+              expanded injectables capacity by 250mn units across multiple
+              facilities. This should suffice for the next 3-4 years.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Going forward, Gland Pharma has ample levers for efficient capital
+              allocation - steady FCF generation, room for dividends, scope for
+              inorganic growth. Judicious use of cash flows will be key from a
+              shareholder value creation standpoint.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="background">Valuation</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Gland Pharma had a spectacular debut with its stock listing at a
+              huge premium over the IPO price. Valuations peaked at nearly 200
+              P/E as the market rewarded it for its stellar growth and
+              prospects.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              However, as growth hit roadblocks over the past year, the stock
+              has corrected nearly 60% from peak levels. It now trades at a
+              seemingly reasonable P/E of 34-35x and market cap of ₹25,470
+              crore.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              But valuing the company at current juncture remains tricky. If
+              growth resumes strongly, margins bounce back and new launches gain
+              traction, the business can re-rate significantly from here on.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              However, if global supply chain constraints and cost pressures
+              persist impacting growth, the stock may languish around current
+              levels for some time before seeing a breakout.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Therefore, rather than focus just on trailing earnings multiples,
+              investors need to assess Gland Pharma's medium to long term growth
+              outlook while also tracking near term trajectory closely.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Overall, Gland Pharma remains a strong franchise but may require
+              some more time to regain growth momentum in the post-Covid world.
+              For patient, long term investors, the current dip offers an
+              opportunity to grab this emerging generic injectables leader at
+              reasonable valuations. But don't expect a re-rating in the
+              immediate short term.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">Key Positives and Risks</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Here's some of the key strengths and risks to monitor for Gland
+              Pharma:
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="background">Positives</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Leading position in sterile injectables
+            </p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Strong regulatory compliance record
+            </p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Expanding portfolio and capabilities
+            </p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">- Healthy new product pipeline</p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Robust balance sheet with high capital efficiency
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="background">Risks</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Concentration risk with 50% exposure to US
+            </p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Regulatory audits and compliance issues
+            </p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">- Currency fluctuations</p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Client concentration in parts of business
+            </p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              - Execution challenges on growth initiatives
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              The adverse impact from most of these risks appears to be already
+              reflected in the stock's 60% correction. But investors need to
+              watch out for any incremental challenges on these fronts.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="background">Final Thoughts</p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              Gland Pharma is clearly going through a soft patch as key markets
+              are yet to normalize fully post-Covid disruptions. This has
+              weighed on growth and profitability over the past year.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              While near term headwinds remain, the company has demonstrated
+              strong business fundamentals in the past across multiple cycles.
+              Once global pharmaceutical supply chains achieve stability, Gland
+              Pharma could be back on the growth runway.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+            <p class="this-pharma-stock"></p>
+            <p class="this-pharma-stock">
+              For investors with a 2-3 year outlook, the current valuation at
+              ~35 P/E represents a reasonable entry point to build exposure in
+              this emerging injectables leader. Strong growth revival and
+              execution remain the key monitorables going forward.
+            </p><p style="Margin:0;mso-line-height-alt:24px;mso-ansi-font-size:16px;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:150%;mso-line-height-alt:24px;mso-ansi-font-size:16px;">&nbsp;</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="pc100 ogf" style="font-size:0;text-align:left;direction:ltr;display:inline-block;width:100%;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><tbody><tr><td style="padding:0;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%"><tbody><tr><td align="left" class="i fw-1" style="font-size:0;padding:0;word-break:break-word;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0;" class="fwm"><tbody><tr><td style="width:600px;" class="fwm"> <img alt="" src="https://raw.githubusercontent.com/rawsting/tools/main/assets/gland%20pharma%20profit%20and%20loss.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="600" height="auto">
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table></div>
+
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="footer-links-stacked-row-for">
+        <div class="column-for-content-elements11">
+          <div class="button">
+            <b class="link">Privacy Policy</b>
+          </div>
+          <div class="button">
+            <b class="link">Terms & Conditions</b>
+          </div>
+          <div class="button">
+            <b class="link">Contact Us</b>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider-row-for-conte">
+        <div class="column-for-content-elements">
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
