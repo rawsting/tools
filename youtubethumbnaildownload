@@ -1,0 +1,220 @@
+
+	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Download Youtube Thumbnail 4K</title>
+	  <meta name="viewport" content="initial-scale=1.0">
+    <meta name="description" content="download youtube thumbnail 4k,youtube thumbnail download 4k, youtube thumbnail download free fire, YouTube Thumbnail Downloader Full HD , YT Thumbnail Dl, View and Download HD thumbnails of all quality with YouTube Video Link, No Sign Up required.">
+ <meta name="keywords" content="download youtube thumbnail 4k, yt thumbnail dl,Yt thumbnail grabber,yt thumbnail extractor,Social media thumbnail downloader,Thumbnail saver,Thumbnail grabber,Online thumbnail downloader,Thumbnail downloader tool,Free thumbnail grabber" />
+<meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+	  <meta name="Robots" content="All" />
+	  <meta name="theme-color" content="#201E1D" >
+	  	<link rel="icon" type="image/png" sizes="32x32" href="download.svg">
+		<link rel="icon" type="image/png" sizes="16x16" href="download.svg">
+		<link rel="apple-touch-icon" sizes="180x180" href="download.svg">
+	   <link rel="canonical" href="https://spunktools.com" />
+	 
+	</head> <!-- Google tag (gtag.js) --><script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "spunktools.com"
+  },
+  "headline": "Youtube thumbnail downloader",
+  "description": "youtube thumbnails download, yt thumbnail downloader 4k , youtube thumbnail downloader 1080p",
+  "image": {
+    "@type": "ImageObject",
+    "url": "",
+    "width": "",
+    "height": ""
+  },
+  "author": {
+    "@type": "Person",
+    "name": "youtube thumbnail downloader"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "",
+      "width": "",
+      "height": ""
+    }
+  },
+  "datePublished": "2023-08-08",
+  "dateModified": "2023-08-11"
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRNJXHXDP8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GRNJXHXDP8');
+</script>
+	<table style="border-collapse: collapse; width: 100.029%;" border="0">
+<tbody>
+<tr>
+<td style="width: 97.8561%;">
+<table style="border-collapse: collapse; width: 99.8817%; height: 90px;" border="0">
+<tbody>
+<tr>
+<td style="width: 34.4365%;">
+<table style="border-collapse: collapse; width: 64.6737%; height: 73px; float: right;" border="0">
+<tbody>
+<tr style="height: 22.4px;">
+<td style="width: 100%; height: 22.4px;"><strong><span style="font-size: 14pt;">Download Youtube Thumbnail</span></strong></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 33.2339%;">&nbsp;</td>
+<td style="width: 32.1811%;">
+<table style="border-collapse: collapse; width: 100.613%;" border="0">
+<tbody>
+<tr>
+<td style="width: 92.6244%;"><strong><span style="font-size: 14pt;"><a href="https://spunktools.com/privacypolicy.html">Privacy Policy</a></span></strong></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        margin-right: 10px;
+        width: 100%;
+        max-width: 400px;
+	      border: #f4f4f4;
+  border-style:solid ;
+        border-radius: 7px;
+        background-color: #333;
+        color: #fff;
+      }
+      button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #333;
+	       border: #f4f4f4;
+  border-style:solid ;
+        color: #fff;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+      .thumbnail-container {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .thumbnail {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      .download-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>YouTube Thumbnail Downloader</h1>
+      <form onsubmit="return getThumbnails()">
+        <input type="text" id="urlInput" placeholder="Enter YouTube video URL">
+        <button type="submit">Get Thumbnails</button>
+      </form>
+      <div class="thumbnail-container" id="thumbnailContainer">
+      </div>
+    </div>
+    <script>
+      function getThumbnails() {
+        var urlInput = document.getElementById("urlInput").value;
+        var videoId = "";
+        var shortUrlRegex = /https:\/\/youtu.be\/([a-zA-Z0-9_-]+)/;
+        var longUrlRegex = /https:\/\/www.youtube.com\/watch\?v=([a-zA-Z0-9_-]+)/;
+
+        if (shortUrlRegex.test(urlInput)) {
+          var shortUrlMatch = urlInput.match(shortUrlRegex);
+          videoId = shortUrlMatch[1];
+        } else if (longUrlRegex.test(urlInput)) {
+          var longUrlMatch = urlInput.match(longUrlRegex);
+          videoId = longUrlMatch[1];
+        } else {
+          alert("Invalid YouTube URL");
+          return false;
+        }
+        
+        var thumbnailContainer = document.getElementById("thumbnailContainer");
+        thumbnailContainer.innerHTML = "";
+        
+        var thumbnailQualities = ["maxresdefault", "sddefault", "hqdefault", "mqdefault", "default"];
+        for (var i = 0; i < thumbnailQualities.length; i++) {
+          var thumbnailUrl = "https://img.youtube.com/vi/" + videoId +
+
+"/" + thumbnailQualities[i] + ".jpg";
+var thumbnailElem = document.createElement("div");
+thumbnailElem.classList.add("thumbnail");
+var imgElem = document.createElement("img");
+imgElem.src = thumbnailUrl;
+thumbnailElem.appendChild(imgElem);
+var downloadBtn = document.createElement("a");
+downloadBtn.href = thumbnailUrl;
+downloadBtn.download = "thumbnail_" + thumbnailQualities[i] + ".jpg";
+downloadBtn.textContent = "Download";
+downloadBtn.classList.add("download-btn");
+thumbnailElem.appendChild(downloadBtn);
+thumbnailContainer.appendChild(thumbnailElem);
+}
+
+    return false;
+  }
+</script>
+  </body>
+</html>
